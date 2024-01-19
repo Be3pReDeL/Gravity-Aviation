@@ -67,6 +67,5 @@ public class GetBetaFeatures : MonoBehaviour {
         var request = NotificationCenter.RequestPermission();
         yield return request;
 #endif
-        yield return null;
     }
 }
