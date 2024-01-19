@@ -28,9 +28,6 @@ using UnityEngine.Events;
 ///
 /// See https://docs.uniwebview.com/guide/oauth2.html for a more detailed guide of authentication in UniWebView.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowDiscord : UniWebViewAuthenticationCommonFlow, IUniWebViewAuthenticationFlow<UniWebViewAuthenticationDiscordToken> {
     /// <summary>
     /// The client ID of your Discord application.
@@ -205,8 +202,6 @@ public class UniWebViewAuthenticationFlowDiscord : UniWebViewAuthenticationCommo
 /// The authentication flow's optional settings for Discord.
 /// </summary>
 [Serializable]
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowDiscordOptional {
     /// <summary>
     /// Whether to enable PKCE when performing authentication. On mobile platforms, this has to be enabled as `S256`,
@@ -223,9 +218,5 @@ public class UniWebViewAuthenticationFlowDiscordOptional {
 /// <summary>
 /// The token object from Discord. Check `UniWebViewAuthenticationStandardToken` for more.
 /// </summary>
-/// 
-
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationDiscordToken : UniWebViewAuthenticationStandardToken { }
 

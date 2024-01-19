@@ -37,9 +37,6 @@ using System;
 /// 
 /// See https://docs.uniwebview.com/guide/oauth2.html for a more detailed guide of authentication in UniWebView.
 /// </remarks>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationSession: UnityEngine.Object {
   /// <summary>
   /// Delegate for authentication session finished event.

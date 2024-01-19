@@ -32,9 +32,6 @@ using UnityEngine.Events;
 ///
 /// See https://docs.uniwebview.com/guide/oauth2.html for a more detailed guide of authentication in UniWebView.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowLine : UniWebViewAuthenticationCommonFlow, IUniWebViewAuthenticationFlow<UniWebViewAuthenticationLineToken> {
     /// <summary>
     /// The client ID (Channel ID) of your LINE Login application.
@@ -217,8 +214,6 @@ public class UniWebViewAuthenticationFlowLine : UniWebViewAuthenticationCommonFl
 /// The authentication flow's optional settings for LINE.
 /// </summary>
 [Serializable]
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowLineOptional {
     /// <summary>
     /// Whether to enable PKCE when performing authentication. Default is `S256`.
@@ -229,7 +224,4 @@ public class UniWebViewAuthenticationFlowLineOptional {
 /// <summary>
 /// The token object from LINE. Check `UniWebViewAuthenticationStandardToken` for more.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationLineToken : UniWebViewAuthenticationStandardToken { }

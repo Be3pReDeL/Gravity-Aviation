@@ -24,8 +24,6 @@ enum UniWebViewChannelMethod {
     ShouldUniWebViewHandleRequest
 }
 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 class UniWebViewChannelMethodManager {
     
     private static UniWebViewChannelMethodManager instance;

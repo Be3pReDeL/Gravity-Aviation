@@ -26,8 +26,6 @@ using UnityEngine;
 /// This is a super and abstract class for all concrete auth flow. You are not expected to use this class directly.
 /// Instead, to start a customized auth flow, you can use the `UniWebViewAuthenticationFlowCustomize` class.
 /// </summary>
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public abstract class UniWebViewAuthenticationCommonFlow: MonoBehaviour {
     /// <summary>
     /// Whether to start authentication as soon as the script `Start`s.

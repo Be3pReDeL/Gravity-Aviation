@@ -10,7 +10,7 @@ public class GetBetaFeatures : MonoBehaviour {
     public static int SceneIndex { get; private set; } = 2;
     public static string URLToShow { get; private set; }
 
-    public string URL { get; set; }
+    public string URL;
 
     private const string STOPMESSAGE = "no beta features for this region";
 
@@ -46,15 +46,20 @@ public class GetBetaFeatures : MonoBehaviour {
 
     private void ProcessApiResponse(string responseText) {
         string processedText = responseText.Replace("\"", "");
-        Debug.Log(processedText);
+
 
         if (processedText == STOPMESSAGE) {
             SceneIndex = 2;
-            Destroy(this);
         } else {
             SceneIndex = 1;
-            URLToShow = processedText;
+            
+            if(PlayerPrefs.GetString("URL", string.Empty) == string.Empty)
+                URLToShow = processedText;
+            else
+                URLToShow = PlayerPrefs.GetString("URL");
         }
+
+        LoadingBar.LoadComplete.Invoke();
     }
 
     private IEnumerator RequestNotificationPermission() {
@@ -62,5 +67,6 @@ public class GetBetaFeatures : MonoBehaviour {
         var request = NotificationCenter.RequestPermission();
         yield return request;
 #endif
+        yield return null;
     }
 }

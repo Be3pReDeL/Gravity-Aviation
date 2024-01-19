@@ -38,9 +38,6 @@ using UnityEngine.Events;
 /// underneath `UniWebViewAuthenticationSession` to get a highly customizable flow.
 /// 
 /// </remarks>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowCustomize : UniWebViewAuthenticationCommonFlow, IUniWebViewAuthenticationFlow<UniWebViewAuthenticationStandardToken> {
 
     /// <summary>
@@ -216,8 +213,6 @@ public class UniWebViewAuthenticationFlowCustomize : UniWebViewAuthenticationCom
 }
 
 [Serializable]
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowCustomizeConfig {
     public string authorizationEndpoint = "";
     public string tokenEndpoint = "";
@@ -228,8 +223,6 @@ public class UniWebViewAuthenticationFlowCustomizeConfig {
 }
 
 [Serializable]
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowCustomizeOptional {
     public UniWebViewAuthenticationPKCE PKCESupport = UniWebViewAuthenticationPKCE.None; 
     public bool enableState = false;

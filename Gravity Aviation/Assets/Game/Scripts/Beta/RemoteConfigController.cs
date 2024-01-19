@@ -3,10 +3,9 @@ using Unity.Services.RemoteConfig;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using System.Threading.Tasks;
-using UnityEngine.Android;
 
 public class RemoteConfigController : MonoBehaviour {
-    public bool EnableBetaFeatures { get; private set; }
+    public static bool EnableBetaFeatures { get; private set; }
 
     [SerializeField] private string _URL;
 

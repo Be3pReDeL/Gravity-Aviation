@@ -20,9 +20,6 @@ using System.IO;
 /// <summary>
 /// Provides some helper utility methods for UniWebView.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewHelper {
     /// <summary>
     /// Get the local streaming asset path for a given file path related to the StreamingAssets folder.

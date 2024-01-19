@@ -37,12 +37,7 @@ using UnityEngine.Events;
 /// https://developers.facebook.com/docs/facebook-login/guides/advanced/manual-flow 
 ///
 /// See https://docs.uniwebview.com/guide/oauth2.html for a more detailed guide of authentication in UniWebView.
-/// 
-/// 
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowFacebook: UniWebViewAuthenticationCommonFlow {
     /// <summary>
     /// The App ID of your Facebook application
@@ -181,8 +176,6 @@ public class UniWebViewAuthenticationFlowFacebook: UniWebViewAuthenticationCommo
 /// The authentication flow's optional settings for Facebook.
 /// </summary>
 [Serializable]
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowFacebookOptional {
     /// <summary>
     /// The scope string of all your required scopes.
@@ -191,9 +184,6 @@ public class UniWebViewAuthenticationFlowFacebookOptional {
 }
 
 /// The token object from Facebook. 
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFacebookToken {
     /// <summary>
     /// The access token received from Facebook Login.

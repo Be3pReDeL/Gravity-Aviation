@@ -1,7 +1,5 @@
 using UnityEngine;
 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewStaticListener {
     public static void DebugLog(string value) {
         var payload = JsonUtility.FromJson<UniWebViewNativeResultPayload>(value);
