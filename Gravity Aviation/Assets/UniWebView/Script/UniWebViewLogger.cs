@@ -19,9 +19,6 @@
 /// A leveled logger which could log UniWebView related messages in 
 /// both development environment and final product.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewLogger {
     /// <summary>
     /// Logger level.

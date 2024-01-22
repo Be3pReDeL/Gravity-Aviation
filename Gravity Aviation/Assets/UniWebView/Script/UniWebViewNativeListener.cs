@@ -25,9 +25,6 @@ using UniWebViewExternal;
 /// It will be added automatically and destroyed as needed. So there is rarely a need for you 
 /// to manipulate on this class.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewNativeListener: MonoBehaviour {
     
     private static Dictionary<String, UniWebViewNativeListener> listeners = new Dictionary<String, UniWebViewNativeListener>();
@@ -200,9 +197,6 @@ public class UniWebViewNativeListener: MonoBehaviour {
 /// as well as some necessary field to bring data from native side to Unity.
 /// </summary>
 [System.Serializable]
-
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewNativeResultPayload {
 
     /// <summary>

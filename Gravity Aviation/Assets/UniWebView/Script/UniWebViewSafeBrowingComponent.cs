@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewSafeBrowingComponent : MonoBehaviour
 {
     [SerializeField]

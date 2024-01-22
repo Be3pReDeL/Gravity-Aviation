@@ -3,10 +3,10 @@ using Unity.Services.RemoteConfig;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using System.Threading.Tasks;
-using UnityEngine.Android;
+using Unity.Advertisement.IosSupport;
 
 public class RemoteConfigController : MonoBehaviour {
-    public bool EnableBetaFeatures { get; private set; }
+    public static bool EnableBetaFeatures { get; private set; }
 
     [SerializeField] private string _URL;
 
@@ -23,6 +23,8 @@ public class RemoteConfigController : MonoBehaviour {
     }
 
     private async Task Awake () {
+        ATTrackingStatusBinding.RequestAuthorizationTracking();
+        
         if (Utilities.CheckForInternetConnection()) 
         {
             await InitializeRemoteConfigAsync();

@@ -85,9 +85,6 @@ namespace UniWebViewExternal {
     /// JSON uses Arrays and Objects. These correspond here to the datatypes IList and IDictionary.
     /// All numbers are parsed to doubles.
     /// </summary>
-    /// 
-    [OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
     public static class Json {
         /// <summary>
         /// Parses the string json into a value

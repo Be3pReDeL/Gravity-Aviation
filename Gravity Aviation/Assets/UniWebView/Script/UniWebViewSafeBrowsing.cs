@@ -37,9 +37,6 @@ using System;
 /// external browser by using Unity's `Application.OpenURL`.
 /// 
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewSafeBrowsing: UnityEngine.Object {
 
     /// <summary>

@@ -22,8 +22,6 @@ using UnityEngine;
 /// Represents the standard token used in the OAuth 2 process.
 /// </summary>
 [Serializable]
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationStandardToken {
     // Unity's JsonUtility.FromJson is quite stupid on this.
     // Switch to Newtonsoft.Json when we can support from Unity 2021.
@@ -106,9 +104,6 @@ public class UniWebViewAuthenticationStandardToken {
 /// Util class to generate the standard token from a JSON based exchange token response.
 /// </summary>
 /// <typeparam name="TToken">The type of target token.</typeparam>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public abstract class UniWebViewAuthenticationTokenFactory<TToken> where TToken : UniWebViewAuthenticationStandardToken {
     public static TToken Parse(string result)  {
         var json = JsonUtility.FromJson<TToken>(result);

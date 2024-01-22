@@ -28,9 +28,6 @@ using UnityEngine.Events;
 ///
 /// See https://docs.uniwebview.com/guide/oauth2.html for a more detailed guide of authentication in UniWebView.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowTwitter : UniWebViewAuthenticationCommonFlow, IUniWebViewAuthenticationFlow<UniWebViewAuthenticationTwitterToken> {
     /// <summary>
     /// The client ID of your Twitter application.
@@ -195,9 +192,6 @@ public class UniWebViewAuthenticationFlowTwitter : UniWebViewAuthenticationCommo
 /// The authentication flow's optional settings for Twitter.
 /// </summary>
 [Serializable]
-
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowTwitterOptional {
     /// <summary>
     /// Whether to enable PKCE when performing authentication.This has to be enabled as `S256`,
@@ -214,7 +208,4 @@ public class UniWebViewAuthenticationFlowTwitterOptional {
 /// <summary>
 /// The token object from Twitter. Check `UniWebViewAuthenticationStandardToken` for more.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationTwitterToken : UniWebViewAuthenticationStandardToken { }

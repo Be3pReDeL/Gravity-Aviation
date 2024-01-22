@@ -31,9 +31,6 @@ using UnityEngine.Events;
 ///
 /// See https://docs.uniwebview.com/guide/oauth2.html for a more detailed guide of authentication in UniWebView.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowGoogle : UniWebViewAuthenticationCommonFlow, IUniWebViewAuthenticationFlow<UniWebViewAuthenticationGoogleToken> {
     /// <summary>
     /// The client ID of your Google application.
@@ -210,9 +207,6 @@ public class UniWebViewAuthenticationFlowGoogle : UniWebViewAuthenticationCommon
 /// The authentication flow's optional settings for Google.
 /// </summary>
 [Serializable]
-
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowGoogleOptional {
     /// <summary>
     /// Whether to enable PKCE when performing authentication. Default is `S256`.
@@ -233,8 +227,5 @@ public class UniWebViewAuthenticationFlowGoogleOptional {
 /// <summary>
 /// The token object from Google. Check `UniWebViewAuthenticationStandardToken` for more.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationGoogleToken : UniWebViewAuthenticationStandardToken { }
 

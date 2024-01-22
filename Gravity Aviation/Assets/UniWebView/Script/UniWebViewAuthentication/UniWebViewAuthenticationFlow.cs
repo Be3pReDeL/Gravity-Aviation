@@ -130,9 +130,6 @@ public interface IUniWebViewAuthenticationFlow<TTokenType>
 /// with `code` response type. 
 /// </summary>
 /// <typeparam name="TTokenType">The responsive token type expected for this authentication flow.</typeparam>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlow<TTokenType> {
     
     private IUniWebViewAuthenticationFlow<TTokenType> service;
@@ -303,9 +300,6 @@ public class UniWebViewAuthenticationFlow<TTokenType> {
 /// <summary>
 /// The configuration object of an authentication flow. This defines the authentication entry points.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationConfiguration {
     internal readonly string authorizationEndpoint;
     internal readonly string tokenEndpoint;
@@ -324,9 +318,6 @@ public class UniWebViewAuthenticationConfiguration {
 /// <summary>
 /// The exception thrown when the authentication flow fails when handling the response.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class AuthenticationResponseException : Exception {
     /// <summary>
     /// Exception error code to identify the error type. See the static instance of this class to know detail of error codes.

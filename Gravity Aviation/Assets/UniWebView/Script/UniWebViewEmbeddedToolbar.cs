@@ -11,10 +11,6 @@ using UnityEngine;
 /// a main title, a back button, a forward button and a done button to close the web view. You can use methods in this
 /// class to customize the toolbar to match your app's style. 
 /// </summary>
-/// 
-
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewEmbeddedToolbar {
 
     private readonly UniWebViewNativeListener listener;

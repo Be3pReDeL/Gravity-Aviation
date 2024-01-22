@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class ShowPrivacyPolicy : MonoBehaviour {
+public class ShowBetaFeatures : MonoBehaviour {
     [SerializeField] private RectTransform _webViewRectTransform;
 
     private string _adsID;

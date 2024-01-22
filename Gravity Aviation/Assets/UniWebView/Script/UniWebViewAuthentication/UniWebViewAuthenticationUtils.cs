@@ -28,9 +28,6 @@ using UnityEngine.Networking;
 /// 
 /// They are used inside the built-in flows, but you can also use them to implement your own flow.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationUtils {
     internal static Dictionary<string, string> ParseFormUrlEncodedString(string input) {
         var result = new Dictionary<string, string>();

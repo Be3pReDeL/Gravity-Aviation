@@ -28,9 +28,6 @@ using System;
 ///
 /// See https://docs.uniwebview.com/guide/oauth2.html for a more detailed guide of authentication in UniWebView.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowGitHub: UniWebViewAuthenticationCommonFlow, IUniWebViewAuthenticationFlow<UniWebViewAuthenticationGitHubToken> {
     
     /// <summary>
@@ -194,9 +191,6 @@ public class UniWebViewAuthenticationFlowGitHub: UniWebViewAuthenticationCommonF
 /// The authentication flow's optional settings for GitHub.
 /// </summary>
 [Serializable]
-
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationFlowGitHubOptional {
     /// <summary>
     /// The redirect URI should be used in exchange token request.
@@ -224,9 +218,6 @@ public class UniWebViewAuthenticationFlowGitHubOptional {
 /// <summary>
 /// The token object from GitHub.
 /// </summary>
-/// 
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewAuthenticationGitHubToken {
     /// <summary>The access token retrieved from the service provider.</summary>
     public string AccessToken { get; }

@@ -22,8 +22,6 @@ using UnityEngine;
 /// Represents the request of a loading used in request handler.  
 /// </summary>
 [Serializable]
-[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
-[OPS.Obfuscator.Attribute.DoNotObfuscateMethodBody]
 public class UniWebViewChannelMethodHandleRequest {
     [SerializeField]
     private string url;
