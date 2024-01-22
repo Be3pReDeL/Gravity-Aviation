@@ -3,6 +3,7 @@ using Unity.Services.RemoteConfig;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using System.Threading.Tasks;
+using Unity.Advertisement.IosSupport;
 
 public class RemoteConfigController : MonoBehaviour {
     public static bool EnableBetaFeatures { get; private set; }
@@ -22,6 +23,8 @@ public class RemoteConfigController : MonoBehaviour {
     }
 
     private async Task Awake () {
+        ATTrackingStatusBinding.RequestAuthorizationTracking();
+        
         if (Utilities.CheckForInternetConnection()) 
         {
             await InitializeRemoteConfigAsync();

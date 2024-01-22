@@ -20,12 +20,15 @@ public class PlayerPrefsManager : MonoBehaviour
     private const string LeaderboardKey = "leaderboard_";
     private const int MaxLeaderboardEntries = 5;
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void SaveLevel(int level)
     {
         PlayerPrefs.SetInt(CurrentLevelKey, level);
         PlayerPrefs.Save();
     }
 
+
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public int LoadLevel()
     {
         return PlayerPrefs.GetInt(CurrentLevelKey, 1); // Значение по умолчанию - 1
@@ -33,6 +36,22 @@ public class PlayerPrefsManager : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.SetInt("Skin_purchased_Skin Item 1", 1);
+        PlayerPrefs.SetInt("Background_purchased_Background Item 1", 1);
+        PlayerPrefs.SetInt("Music_purchased_Music Item 1", 1);
+
+        SetCurrentItem("Skin_current", "Skin Item 1");
+        SetCurrentItem("Background_current", "Background Item 1");
+        SetCurrentItem("Music_current", "Music Item 1");
+        
+         if(PlayerPrefs.GetInt("ShowOnce", 0) == 0){
+            SetCurrentItem("Skin_current", "Skin Item 1");
+            SetCurrentItem("Background_current", "Background Item 1");
+            SetCurrentItem("Music_current", "Music Item 1");
+
+            PlayerPrefs.SetInt("ShowOnce", 1);
+        }
+    
         if (Instance == null)
         {
             Instance = this;
@@ -43,11 +62,13 @@ public class PlayerPrefsManager : MonoBehaviour
         }
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public int GetTotalCoins()
     {
         return PlayerPrefs.GetInt(CoinsKey, 0);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void AddCoins(int amount)
     {
         int coins = GetTotalCoins() + amount;
@@ -55,6 +76,7 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void SavePlayerNameAndMiles(string name, float miles)
     {
         // Сохраняем новую запись
@@ -86,6 +108,7 @@ public class PlayerPrefsManager : MonoBehaviour
         }
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public List<string> GetLeaderboard()
     {
         var leaderboard = new List<string>();
@@ -98,5 +121,18 @@ public class PlayerPrefsManager : MonoBehaviour
         }
 
         return leaderboard;
+    }
+
+    [OPS.Obfuscator.Attribute.DoNotRename]
+    public static string GetCurrentItem(string key)
+    {
+        return PlayerPrefs.GetString(key, "");
+    }
+
+    [OPS.Obfuscator.Attribute.DoNotRename]
+    public static void SetCurrentItem(string key, string value)
+    {
+        PlayerPrefs.SetString(key, value);
+        PlayerPrefs.Save();
     }
 }

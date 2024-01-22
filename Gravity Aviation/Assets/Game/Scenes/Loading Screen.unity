@@ -586,6 +586,14 @@ PrefabInstance:
       propertyPath: devKey
       value: dZtyX92yUqbeFf3V83upLY
       objectReference: {fileID: 0}
+    - target: {fileID: 4405976200006927252, guid: 0bfe3b149145747cc92dc53bb4df4e9b, type: 3}
+      propertyPath: appID
+      value: 6476514533
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405976200006927252, guid: 0bfe3b149145747cc92dc53bb4df4e9b, type: 3}
+      propertyPath: devKey
+      value: dZtyX92yUqbeFf3V83upLY
+      objectReference: {fileID: 0}
     - target: {fileID: 6207133488976360133, guid: 0bfe3b149145747cc92dc53bb4df4e9b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -919,6 +927,7 @@ GameObject:
   - component: {fileID: 1313128936}
   - component: {fileID: 1313128935}
   - component: {fileID: 1313128939}
+  - component: {fileID: 1313128940}
   m_Layer: 0
   m_Name: Game Managers
   m_TagString: Untagged
@@ -991,6 +1000,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _URL: https://dev-rcovvc6yf0j9213.api.raw-labs.com/gravityaviationgetbetafeatures?key=beta%20features
+--- !u!114 &1313128940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313128932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5599b14ea4e49d487140ae55e23aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _OneSignalKey: ec969dce-fa53-4d63-a838-447a4526aae2
 --- !u!1 &1669266147
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,24 +16,33 @@ public class ObjectPool : MonoBehaviour
         for (int i = 0; i < prefabs.Count; i++)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
-
-            for (int j = 0; j < sizes[i]; j++)
+            
+            try
             {
-                GameObject obj = Instantiate(prefabs[i]);
-                obj.SetActive(false);
-                objectPool.Enqueue(obj);
+                for (int j = 0; j < sizes[i]; j++)
+                {
+                    GameObject obj = Instantiate(prefabs[i]);
+                    obj.SetActive(false);
+                    objectPool.Enqueue(obj);
+                }
+            }
+            catch (ArgumentOutOfRangeException)
+            {                
+                Debug.Log("Out");
             }
 
             poolDictionary.Add(prefabs[i], objectPool);
         }
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public GameObject GetRandomPrefab()
     {
-        int randomIndex = Random.Range(0, prefabs.Count);
+        int randomIndex = UnityEngine.Random.Range(0, prefabs.Count);
         return prefabs[randomIndex];
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public GameObject GetFromPool(GameObject prefab) 
     {
         if (poolDictionary.ContainsKey(prefab) && poolDictionary[prefab].Count > 0)
@@ -48,6 +58,7 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void ReturnToPool(GameObject prefab, GameObject obj) 
     {
         obj.SetActive(false);

@@ -18,6 +18,8 @@ public class PlaySoundAndVibrate : MonoBehaviour {
         _audioSource = GetComponent<AudioSource>();
 
         _button = GetComponent<Button>();
+
+        PlayerPrefs.SetInt("Vibration", 1);
     }
 
     [OPS.Obfuscator.Attribute.DoNotRename]

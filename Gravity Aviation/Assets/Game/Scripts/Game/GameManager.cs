@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     public TMP_InputField playerNameInputField; // Ссылка на поле ввода имени
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void SavePlayerName()
     {
         string playerName = playerNameInputField.text;
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (RocketController.Instance.enabled) {
+        if (RocketController.Instance != null && RocketController.Instance.enabled) {
             totalMiles += milesPerSecond * Time.deltaTime;
             UpdateMilesText();
             timeSinceLastIncrease += Time.deltaTime;
@@ -99,6 +100,7 @@ public class GameManager : MonoBehaviour
         milesText.text = totalMiles.ToString("F1") + " Miles"; // Округляем до одного знака после запятой
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void CollectCoin()
     {
         currentGameCoins++;
@@ -126,6 +128,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void LoseLife()
     {
         if (lives > 0)
